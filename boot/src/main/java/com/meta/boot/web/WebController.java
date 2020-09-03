@@ -1,9 +1,14 @@
 package com.meta.boot.web;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.stereotype.Controller;
 
-@RestController
-public class Controller {
+@Controller
+public class WebController {
+	@RequestMapping("/") 
+	public String index() { 
+		return "index"; 
+	}
+	
 	@RequestMapping("/welcome") 
 	public String welcome() { 
 		return "welcome"; 
